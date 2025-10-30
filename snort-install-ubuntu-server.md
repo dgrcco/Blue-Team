@@ -11,13 +11,13 @@
 sudo apt update && sudo apt upgrade -y
 ```
 
-## Installation with apt
+## Install apt packages
 
 ```
 sudo apt install build-essential cmake pkg-config libpcap-dev libdumbnet-dev libhwloc-dev libluajit-5.1-dev libssl-dev libpcre3-dev zlib1g-dev flex bison -y
 ```
 
-## Installing LibDAQ
+## Install LibDAQ
 
 ```
 git clone https://github.com/snort3/libdaq.git
