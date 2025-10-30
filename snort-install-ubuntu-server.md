@@ -2,7 +2,7 @@
 
 # SNORT3 INSTALL UBUNTU SERVER
 
-## Official Docs
+## Official Docs (recommended)
 [https://docs.snort.org/start/installation](https://github.com/snort3/snort3/blob/master/doc/user/tutorial.txt)
 
 ## Update packages
