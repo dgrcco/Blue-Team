@@ -36,7 +36,7 @@ git clone https://github.com/snort3/snort3.git
 ./configure_cmake.sh (or follow the og doc)
 cd build
 make -j $(nproc)
-make install
+sudo make install
 ```
 
 
