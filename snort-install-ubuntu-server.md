@@ -1,27 +1,38 @@
-![Snort3](https://www.snort.org/assets/Snort_fulllogo.png)
-
 # Snort 3 Installation on Ubuntu Server
 
-## Official Docs (recommended)
-[https://docs.snort.org/start/installation](https://github.com/snort3/snort3/blob/master/doc/user/tutorial.txt)
+![Snort3](https://www.snort.org/assets/Snort_fulllogo.png)
 
-## Update packages
+## Official Documentation (Recommended)
+
+* [https://docs.snort.org/start/installation](https://docs.snort.org/start/installation)
+* [https://github.com/snort3/snort3/blob/master/doc/user/tutorial.txt](https://github.com/snort3/snort3/blob/master/doc/user/tutorial.txt)
+
+---
+
+## 1. Update System Packages
 
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
-## Install apt packages
+---
+
+## 2. Install Required Dependencies
 
 ```
-sudo apt install build-essential cmake pkg-config libpcap-dev libdumbnet-dev libhwloc-dev libluajit-5.1-dev libssl-dev libpcre3-dev zlib1g-dev flex bison -y
+sudo apt install -y \
+  build-essential cmake pkg-config \
+  libpcap-dev libdumbnet-dev libhwloc-dev \
+  libluajit-5.1-dev libssl-dev libpcre3-dev \
+  zlib1g-dev flex bison
 ```
 
-## Install LibDAQ
+---
+
+## 3. Install LibDAQ
 
 ```
 git clone https://github.com/snort3/libdaq.git
-
 cd libdaq
 ./bootstrap
 ./configure
@@ -29,144 +40,124 @@ sudo make install
 sudo ldconfig
 ```
 
-## Installing snort
+---
+
+## 4. Install Snort 3
 
 ```
 git clone https://github.com/snort3/snort3.git
-./configure_cmake.sh (or follow the og doc)
+cd snort3
+./configure_cmake.sh
 cd build
 make -j $(nproc)
 sudo make install
+sudo ldconfig
 ```
 
-## add an alias to snort
+---
+
+## 5. Add Snort to PATH
 
 ```
-alias snort='alias snort='/usr/local/snort/bin/snort --daq-dir /usr/local/lib/daq_s3/lib/daq''
+echo 'export PATH=/usr/local/snort/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
 ```
 
+Verify:
+
 ```
-snort@server:~$ snort -V
+snort -V
+```
 
+---
 
+## Example Output
+
+```
    ,,_     -*> Snort++ <*-
   o"  )~   Version 3.9.6.0
-   ''''    By Martin Roesch & The Snort Team
-           http://snort.org/contact#team
-           Copyright (C) 2014-2025 Cisco and/or its affiliates. All rights reserved.
-           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
-           Using DAQ version 3.0.21
-           Using libpcap version 1.10.5 (with TPACKET_V3)
-           Using LuaJIT version 2.1.1761727121
-           Using LZMA version 5.4.5
-           Using OpenSSL 3.0.13 30 Jan 2024
-           Using PCRE2 version 10.47 2025-10-21
-           Using ZLIB version 1.3.1
-
+   ''''    Using DAQ version 3.0.21
 ```
 
+---
 
-# Install packages from source
+# Extra: Installing Components from Source (Optional)
 
-
-## Installing dnet (apt install libdumbnet-dev)
+## libdnet
 
 ```
 git clone https://github.com/dugsong/libdnet.git
-cd libdnet/
+cd libdnet
 ./configure && make
 sudo make install
 ```
 
-## Installing hwloc 
+## hwloc
 
-click on the download page: [https://www.open-mpi.org/projects/hwloc/](https://www.open-mpi.org/projects/hwloc/)
+Download: [https://www.open-mpi.org/projects/hwloc/](https://www.open-mpi.org/projects/hwloc/)
+
 ```
 wget https://download.open-mpi.org/release/open-mpi/v5.0/openmpi-5.0.8.tar.gz
 tar zxvf openmpi-5.0.8.tar.gz
-cd openmpi-5.0.8/
+cd openmpi-5.0.8
 ./configure && make
 sudo make install
 ```
 
-## Installing Openssl
-
-[https://openssl-library.org/source/](https://openssl-library.org/source/)
+## OpenSSL
 
 ```
 wget https://github.com/openssl/openssl/releases/download/openssl-3.6.0/openssl-3.6.0.tar.gz
 tar zxvf openssl-3.6.0.tar.gz
-cd openssl-3.6.0/
+cd openssl-3.6.0
 ./Configure && make
 sudo make install
 ```
 
-## Installing libpcap (can be installed with apt)
-
-[https://www.tcpdump.org/index.html#latest-releases](https://www.tcpdump.org/index.html#latest-releases)
+## libpcap
 
 ```
 wget https://www.tcpdump.org/release/libpcap-1.10.5.tar.xz
 tar xvf libpcap-1.10.5.tar.xz
-cd libpcap-1.10.5/
+cd libpcap-1.10.5
 ./configure && make
 sudo make install
 ```
 
-## Installing pcre
-
-[https://github.com/PCRE2Project/pcre2/releases](https://github.com/PCRE2Project/pcre2/releases)
+## pcre2
 
 ```
 wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.gz
 tar zxvf pcre2-10.47.tar.gz
-cd pcre2-10.47/
+cd pcre2-10.47
 ./configure && make
 sudo make install
 ```
 
-## Installing pkgconfig
-
-[https://www.freedesktop.org/wiki/Software/pkg-config/](https://www.freedesktop.org/wiki/Software/pkg-config/)
+## pkgconfig
 
 ```
 wget http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 tar zxvf pkg-config-0.29.2.tar.gz
-cd pkg-config-0.29.2/
+cd pkg-config-0.29.2
 ./configure && make
 sudo make install
 ```
 
-
-## Installing pkgconfig (already installed with apt in the first command)
-
-[https://www.freedesktop.org/wiki/Software/pkg-config/](https://www.freedesktop.org/wiki/Software/pkg-config/)
-
-```
-wget http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
-tar zxvf pkg-config-0.29.2.tar.gz
-cd pkg-config-0.29.2/
-./configure && make
-sudo make install
-```
-
-## Installing zlib (can be installed with apt)
-[https://www.zlib.net/zlib-1.3.1.tar.gz](https://www.zlib.net/zlib-1.3.1.tar.gz)
+## zlib
 
 ```
 wget https://www.zlib.net/zlib-1.3.1.tar.gz
 tar zxvf zlib-1.3.1.tar.gz
-cd zlib-1.3.1/
+cd zlib-1.3.1
 ./configure && make
 sudo make install
 ```
 
-# Remove all downloaded files
+---
+
+## Clean Download Directory
 
 ```
 sudo rm -rf *
 ```
-
-
-
-
