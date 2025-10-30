@@ -39,11 +39,10 @@ make -j $(nproc)
 sudo make install
 ```
 
-## Add snort to PATH
+## add an alias to snort
 
 ```
-echo 'export PATH=/usr/local/snort/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+alias snort='alias snort='/usr/local/snort/bin/snort --daq-dir /usr/local/lib/daq_s3/lib/daq''
 ```
 
 ```
