@@ -45,6 +45,8 @@ sudo make install
 echo 'export PATH=/usr/local/snort/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
+
+```
 snort@server:~$ snort -V
 
 
