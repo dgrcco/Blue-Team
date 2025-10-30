@@ -40,7 +40,7 @@ make install
 ```
 
 
-# Source Installation
+# Install packages from source
 
 
 ## Installing dnet (apt install libdumbnet-dev)
