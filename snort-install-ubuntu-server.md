@@ -90,7 +90,7 @@ snort@server:~$ snort -V
            Using ZLIB version 1.3.1
 ```
 
----
+![snort](/../main/img/Screenshot%202025-10-30%20195615.png)
 
 # Extra: Installing Components from Source (Optional)
 
