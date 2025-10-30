@@ -47,6 +47,7 @@ source ~/.bashrc
 ```
 snort@server:~$ snort -V
 
+
    ,,_     -*> Snort++ <*-
   o"  )~   Version 3.9.6.0
    ''''    By Martin Roesch & The Snort Team
@@ -60,7 +61,6 @@ snort@server:~$ snort -V
            Using OpenSSL 3.0.13 30 Jan 2024
            Using PCRE2 version 10.47 2025-10-21
            Using ZLIB version 1.3.1
-
 
 ```
 
