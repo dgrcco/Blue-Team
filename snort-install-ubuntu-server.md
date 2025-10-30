@@ -39,6 +39,12 @@ make -j $(nproc)
 sudo make install
 ```
 
+## Add snort to PATH
+
+```
+echo 'export PATH=/usr/local/snort/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
 
 # Install packages from source
 
