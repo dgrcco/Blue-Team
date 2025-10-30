@@ -1,6 +1,6 @@
 ![Snort3](https://www.snort.org/assets/Snort_fulllogo.png)
 
-# SNORT3 INSTALL UBUNTU SERVER
+# SNORT3 INSTALL ON UBUNTU SERVER
 
 ## Official Docs (recommended)
 [https://docs.snort.org/start/installation](https://github.com/snort3/snort3/blob/master/doc/user/tutorial.txt)
