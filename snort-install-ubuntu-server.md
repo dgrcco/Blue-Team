@@ -45,6 +45,25 @@ sudo make install
 echo 'export PATH=/usr/local/snort/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
+snort@server:~$ snort -V
+
+   ,,_     -*> Snort++ <*-
+  o"  )~   Version 3.9.6.0
+   ''''    By Martin Roesch & The Snort Team
+           http://snort.org/contact#team
+           Copyright (C) 2014-2025 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using DAQ version 3.0.21
+           Using libpcap version 1.10.5 (with TPACKET_V3)
+           Using LuaJIT version 2.1.1761727121
+           Using LZMA version 5.4.5
+           Using OpenSSL 3.0.13 30 Jan 2024
+           Using PCRE2 version 10.47 2025-10-21
+           Using ZLIB version 1.3.1
+
+
+```
+
 
 # Install packages from source
 
