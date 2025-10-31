@@ -58,7 +58,7 @@ sudo make install
 ## 5. Add an alias to snort
 
 ```
-alias snort='/usr/local/snort/bin/snort --daq-dir /usr/local/lib/daq_s3/lib/daq'
+alias snort='/usr/local/snort/bin/snort'
 ```
 
 Verify:
