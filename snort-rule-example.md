@@ -1,3 +1,7 @@
+> [!CAUTION]
+> This is only for testing; do not use these rules in a real environment.
+
+
 # Snort Alert Rule Example
 
 Thread actor IP: 192.168.163.130 (VM)
