@@ -64,6 +64,7 @@ alert tcp 192.168.163.130 any -> $HOME_NET 80
 (
         msg:"possible tcp-syn flood";
         flags:S;
+        dsize:0;
         detection_filter:track by_src,count 50,seconds 10;
         sid:6000006;
         rev:1;
@@ -86,6 +87,7 @@ alert tcp 192.168.163.130 any -> $HOME_NET 80
 (
         msg:"possible tcp-ack flood";
         flags:A;
+        dsize:0;
         detection_filter:track by_src,count 50,seconds 10;
         sid:7000007;
         rev:1;
