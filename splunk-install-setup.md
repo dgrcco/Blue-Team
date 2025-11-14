@@ -44,3 +44,5 @@ cd /opt/splunk/etc/apps
 sudo git clone https://github.com/splunk/botsv3
 sudo ./splunk restart
 ```
+
+![dataset](/../main/img/Immagine%202025-11-14%20194727.png)
