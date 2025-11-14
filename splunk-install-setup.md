@@ -31,4 +31,7 @@ web app 192.168.163.131:8000
 
 ## Setup Splunk and Forwarder
 
-[continue]
+setup tls [https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/9.0/secure-splunk-platform-communications-with-transport-layer-security-certificates/configure-splunk-web-to-use-tls-certificates#id_2771b640_5e98_4545_bbfe_8444e86bc31d__Configure_Splunk_Web_to_use_TLS_certificates](https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/9.0/secure-splunk-platform-communications-with-transport-layer-security-certificates/configure-splunk-web-to-use-tls-certificates#id_2771b640_5e98_4545_bbfe_8444e86bc31d__Configure_Splunk_Web_to_use_TLS_certificates)
+
+go to https://192.168.163.131:8000/it-IT/manager/launcher/server/settings/settings?action=edit and turn on https.
+go to http://192.168.163.131:8000/it-IT/manager/launcher/forwardreceive and setup the port to receive the data.
