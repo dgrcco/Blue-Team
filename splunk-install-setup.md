@@ -20,7 +20,7 @@ choose your credentials.
 
 ## Login
 
-VMWARE IP: 192.168.163.131
+ubuntu server IP (vmware): 192.168.163.131
 
 web app 192.168.163.131:8000
 
