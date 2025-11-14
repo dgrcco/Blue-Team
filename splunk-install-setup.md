@@ -24,5 +24,7 @@ VMWARE IP: 192.168.163.131
 
 web app 192.168.163.131:8000
 
+![login](/../main/img/Immagine%202025-11-14%20191406.png)
 
+![dashboard](/../main/img/Immagine%202025-11-14%20191508.png)
 
