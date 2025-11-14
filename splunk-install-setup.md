@@ -35,7 +35,7 @@ setup tls [https://help.splunk.com/en/splunk-enterprise/administer/manage-users-
 
 go to https://192.168.163.131:8000/it-IT/manager/launcher/server/settings/settings?action=edit and turn on https.
 
-go to http://192.168.163.131:8000/it-IT/manager/launcher/forwardreceive and setup the port to receive the data.
+go to http://192.168.163.131:8000/it-IT/manager/launcher/forwardreceive and set the port to receive the data.
 
 ## Install a set of data to study splunk
 
