@@ -28,3 +28,7 @@ web app 192.168.163.131:8000
 
 ![dashboard](/../main/img/Immagine%202025-11-14%20191508.png)
 
+
+## Setup Splunk and Forwarder
+
+[continue]
