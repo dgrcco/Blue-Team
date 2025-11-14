@@ -29,7 +29,7 @@ web app 192.168.163.131:8000
 ![dashboard](/../main/img/Immagine%202025-11-14%20191508.png)
 
 
-## Setup Splunk and Forwarder
+## Setup Https and Forwarder
 
 setup tls [https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/9.0/secure-splunk-platform-communications-with-transport-layer-security-certificates/configure-splunk-web-to-use-tls-certificates#id_2771b640_5e98_4545_bbfe_8444e86bc31d__Configure_Splunk_Web_to_use_TLS_certificates](https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/9.0/secure-splunk-platform-communications-with-transport-layer-security-certificates/configure-splunk-web-to-use-tls-certificates#id_2771b640_5e98_4545_bbfe_8444e86bc31d__Configure_Splunk_Web_to_use_TLS_certificates)
 
