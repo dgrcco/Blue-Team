@@ -37,4 +37,10 @@ go to https://192.168.163.131:8000/it-IT/manager/launcher/server/settings/settin
 
 go to http://192.168.163.131:8000/it-IT/manager/launcher/forwardreceive and setup the port to receive the data.
 
-[CONTINUE]
+### Install a set of data to study splunk
+
+```
+cd /opt/splunk/etc/apps
+sudo git clone https://github.com/splunk/botsv3
+sudo ./splunk restart
+```
