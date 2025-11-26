@@ -44,8 +44,9 @@ cd /opt/splunk/etc/apps
 sudo wget https://botsdataset.s3.amazonaws.com/botsv3/botsv3_data_set.tgz
 sudo tar xvf botsv3_data_set.tgz
 sudo rm -rf botsv3_data_set.tgz
+sudo chown -R test:test botsv3_data_set/
 cd /opt/splunk/bin/
 sudo ./splunk restart
 ```
 
-![dataset](/../main/img/Immagine%202025-11-14%20194727.png)
+![dataset](/../main/img/Immagine%202025-11-26%20173041.png)
