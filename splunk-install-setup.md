@@ -41,7 +41,10 @@ go to http://192.168.163.131:8000/it-IT/manager/launcher/forwardreceive and set 
 
 ```
 cd /opt/splunk/etc/apps
-sudo git clone https://github.com/splunk/botsv3
+sudo wget https://botsdataset.s3.amazonaws.com/botsv3/botsv3_data_set.tgz
+sudo tar xvf botsv3_data_set.tgz
+sudo rm -rf botsv3_data_set.tgz
+cd /opt/splunk/bin/
 sudo ./splunk restart
 ```
 
