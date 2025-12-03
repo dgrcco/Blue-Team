@@ -87,5 +87,6 @@ Now, create an index for the receiver on the splunk enterprise.
 
 ```
 ./splunk add monitor /var/log -index <index_name>
+./splunk add monitor /var/log/auth.log -index linux_index
 ```
 
