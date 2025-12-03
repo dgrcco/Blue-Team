@@ -54,6 +54,8 @@ sudo ./splunk restart
 
 ## Setup Universal Forwarder
 
+[https://help.splunk.com/en/splunk-enterprise/forward-and-process-data/universal-forwarder-manual/10.0/about-the-universal-forwarder/about-the-universal-forwarder](https://help.splunk.com/en/splunk-enterprise/forward-and-process-data/universal-forwarder-manual/10.0/about-the-universal-forwarder/about-the-universal-forwarder)
+
 ```
 useradd -m splunkfwd
 groupadd splunkfwd
