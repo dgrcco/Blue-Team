@@ -84,6 +84,6 @@ Now, create an index for the receiver on the splunk enterprise.
 ### Configure a data input on the forwarder
 
 ```
-./splunk add monitor /var/log
+./splunk add monitor /var/log -index <index_name>
 ```
 
