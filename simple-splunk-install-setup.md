@@ -90,3 +90,7 @@ Now, create an index for the receiver on the splunk enterprise.
 ./splunk add monitor /var/log/auth.log -index linux_index
 ```
 
+### Manually enable a least privilege user
+```
+[sudo] $SPLUNK_HOME/bin/splunk enable boot-start -systemd-managed 1 -user <username> -group <groupname>
+```
